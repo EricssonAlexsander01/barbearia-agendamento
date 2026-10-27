@@ -1,0 +1,25 @@
+{
+  "name": "barbearia-agendamento",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:local": "wrangler d1 migrations apply barbearia-agendamento --local",
+    "db:remote": "wrangler d1 migrations apply barbearia-agendamento --remote",
+    "seed:local": "node scripts/seed-local.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "pbkdf2-lite": "^0.1.1"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.12",
+    "wrangler": "^4.153.0"
+  },
+  "allowScripts": {
+    "esbuild": true,
+    "workerd": true
+  }
+}

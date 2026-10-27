@@ -1,0 +1,19 @@
+name = "barbearia-agendamento"
+main = "src/index.js"
+compatibility_date = "2026-10-26"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "barbearia-agendamento"
+database_id = "SUBSTITUA_PELO_ID_REAL_DO_D1"
+migrations_dir = "migrations"
+
+[vars]
+APP_TIME_ZONE = "America/Sao_Paulo"
+SESSION_TTL_HOURS = "12"
+PUBLIC_TOKEN_TTL_DAYS = "45"
+PBKDF2_ITERATIONS = "100000"

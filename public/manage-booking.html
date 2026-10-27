@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gerenciar agendamento | Barbearia</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM7 17V3l10 14V3"/></svg>
+      </span>
+      <span class="brand-copy">
+        <strong>BARBEARIA</strong>
+        <small>ESTILO COM INTENÇÃO</small>
+      </span>
+    </a>
+    <div class="header-note">
+      <span class="status-dot"></span> Área do cliente
+    </div>
+  </header>
+
+  <main class="page-layout" style="grid-template-columns: 1fr; max-width: 680px; padding-top: 40px;">
+    <div class="booking-card">
+      <div class="booking-top">
+        <div>
+          <p class="eyebrow eyebrow--dark">SEU AGENDAMENTO</p>
+          <h2>Consultar ou cancelar</h2>
+          <p class="booking-subtitle">Esta página usa um link privado de autorização. Não compartilhe o link.</p>
+        </div>
+      </div>
+
+      <div class="step-panel" style="margin-top: 24px;">
+        <div id="details" class="selection-summary" style="padding: 20px; display: block; font-size: 14px; line-height: 1.6;">
+          Carregando informações...
+        </div>
+
+        <div class="step-actions step-actions--end" style="margin-top: 24px;">
+          <button id="cancel" class="button button-primary" style="background: var(--danger); box-shadow: 0 5px 12px rgba(157, 52, 52, .15);" hidden>
+            Cancelar agendamento
+          </button>
+        </div>
+
+        <p id="message" class="message" role="status" aria-live="polite" style="margin-top: 16px;"></p>
+      </div>
+
+      <footer class="card-footer">
+        <span class="footer-spark">✳</span> Em caso de dúvidas, entre em contato com a barbearia.
+      </footer>
+    </div>
+  </main>
+</body>
+<script type="module" src="/js/manage-booking.js"></script>
+</html>

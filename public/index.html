@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#285B4A">
+  <meta name="description" content="Escolha seu serviço e reserve seu próximo horário com praticidade.">
+  <title>Agende seu horário | Barbearia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div class="ambient ambient--one" aria-hidden="true"></div>
+  <div class="ambient ambient--two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Barbearia, início">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M10 4.5v23M22 4.5v23M10 8h12M10 24h12M7 11.5h18M7 20.5h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M13 4.5h6v23h-6z" stroke="currentColor" stroke-width="1.3"/></svg>
+      </span>
+      <span class="brand-copy"><strong>BARBEARIA</strong><small>ESTILO COM INTENÇÃO</small></span>
+    </a>
+    <div class="header-note"><span class="status-dot"></span> Agendamento online <span class="header-divider">/</span> Simples e seguro</div>
+  </header>
+
+  <main class="page-layout">
+    <section class="intro" aria-labelledby="hero-title">
+      <p class="eyebrow"><span class="eyebrow-line"></span> SEU TEMPO. SEU ESTILO.</p>
+      <h1 id="hero-title">O próximo nível<br>começa <em>na cadeira.</em></h1>
+      <p class="intro-copy">Escolha seus serviços, encontre o melhor horário e deixe o resto com a gente.</p>
+      <div class="intro-details">
+        <span class="detail-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.5"/></svg>
+        </span>
+        <span><strong>Seu ritual, no seu horário.</strong><small>Reserve em poucos passos, sem ligações.</small></span>
+      </div>
+      <div class="intro-stamp" aria-hidden="true"><span>PRECISÃO</span><i>✳</i><span>ESTILO</span><i>✳</i><span>DETALHE</span></div>
+    </section>
+
+    <section class="booking-card" aria-labelledby="booking-title">
+      <div class="booking-top">
+        <div>
+          <p class="eyebrow eyebrow--dark">RESERVA ONLINE</p>
+          <h2 id="booking-title">Agende seu horário</h2>
+          <p class="booking-subtitle">Leva menos de 2 minutos.</p>
+        </div>
+        <span class="secure-badge"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="4.5" y="8.5" width="11" height="8" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M7 8.5V6a3 3 0 0 1 6 0v2.5" stroke="currentColor" stroke-width="1.4"/></svg> Seguro</span>
+      </div>
+
+      <nav class="progress" aria-label="Progresso do agendamento">
+        <div class="progress-track"><span id="progress-fill"></span></div>
+        <ol class="progress-steps">
+          <li class="progress-step is-current" data-step-indicator="1"><span class="step-number">1</span><span>Serviços</span></li>
+          <li class="progress-step" data-step-indicator="2"><span class="step-number">2</span><span>Barbeiro</span></li>
+          <li class="progress-step" data-step-indicator="3"><span class="step-number">3</span><span>Data e hora</span></li>
+          <li class="progress-step" data-step-indicator="4"><span class="step-number">4</span><span>Seus dados</span></li>
+        </ol>
+      </nav>
+
+      <form id="booking-form" novalidate>
+        <section class="step-panel is-active" data-step="1" aria-labelledby="step-title-1">
+          <div class="step-heading">
+            <div><span class="step-kicker">ETAPA 01 / 04</span><h3 id="step-title-1">O que vamos fazer?</h3><p>Selecione um ou mais serviços. O preço e a duração serão somados.</p></div>
+            <span class="heading-icon" aria-hidden="true">✳</span>
+          </div>
+          <div id="service-list" class="choice-grid" aria-label="Serviços disponíveis">
+            <div class="loading-card"><span class="skeleton skeleton-icon"></span><span class="skeleton skeleton-line"></span><span class="skeleton skeleton-line short"></span></div>
+            <div class="loading-card"><span class="skeleton skeleton-icon"></span><span class="skeleton skeleton-line"></span><span class="skeleton skeleton-line short"></span></div>
+          </div>
+          <p class="inline-hint">Selecione vários serviços; todos serão realizados pelo mesmo profissional.</p>
+          <div class="step-actions step-actions--end"><button type="button" class="button button-primary" id="next-1" disabled>Continuar <span aria-hidden="true">→</span></button></div>
+        </section>
+
+        <section class="step-panel" data-step="2" aria-labelledby="step-title-2" hidden>
+          <div class="step-heading">
+            <div><span class="step-kicker">ETAPA 02 / 04</span><h3 id="step-title-2">Com quem?</h3><p>Escolha um profissional específico ou deixe a rotação automática selecionar um disponível para todos os serviços.</p></div>
+            <span class="heading-icon" aria-hidden="true">✳</span>
+          </div>
+          <div id="barber-list" class="barber-list">
+            <button type="button" class="barber-choice is-selected" data-barber-id=""><span class="avatar avatar--all">✳</span><span class="barber-copy"><strong>Qualquer profissional</strong><small>Mostrar horários disponíveis</small></span><span class="radio-mark"></span></button>
+          </div>
+          <div class="selection-summary" id="service-summary"></div>
+          <div class="step-actions"><button type="button" class="button button-quiet" data-back="1">← Voltar</button><button type="button" class="button button-primary" id="next-2">Escolher horário <span aria-hidden="true">→</span></button></div>
+        </section>
+
+        <section class="step-panel" data-step="3" aria-labelledby="step-title-3" hidden>
+          <div class="step-heading">
+            <div><span class="step-kicker">ETAPA 03 / 04</span><h3 id="step-title-3">Quando fica melhor?</h3><p>Selecione o dia e um horário livre.</p></div>
+            <span class="heading-icon" aria-hidden="true">◷</span>
+          </div>
+          <label class="field-label" for="date">Escolha a data</label>
+          <div class="date-field-wrap"><span aria-hidden="true">▦</span><input type="date" name="date" id="date" required></div>
+          <div class="slots-heading"><span class="field-label">Horários disponíveis</span><span id="slot-count" class="slot-count"></span></div>
+          <div id="slot-list" class="slot-grid" aria-live="polite"><p class="empty-state">Escolha uma data para consultar os horários.</p></div>
+          <div class="selection-summary" id="slot-summary"></div>
+          <div class="step-actions"><button type="button" class="button button-quiet" data-back="2">← Voltar</button><button type="button" class="button button-primary" id="next-3" disabled>Continuar <span aria-hidden="true">→</span></button></div>
+        </section>
+
+        <section class="step-panel" data-step="4" aria-labelledby="step-title-4" hidden>
+          <div class="step-heading">
+            <div><span class="step-kicker">ETAPA 04 / 04</span><h3 id="step-title-4">Quase lá.</h3><p>Informe seus dados para reservar o horário.</p></div>
+            <span class="heading-icon" aria-hidden="true">✓</span>
+          </div>
+          <div class="review-card" id="booking-review"></div>
+          <div class="fields-grid">
+            <label class="field-label" for="nome">Seu nome
+              <input id="nome" name="nome" autocomplete="name" maxlength="120" placeholder="Como podemos te chamar?" required>
+            </label>
+            <label class="field-label" for="telefone">WhatsApp / telefone
+              <input id="telefone" name="telefone" type="tel" autocomplete="tel" maxlength="20" inputmode="tel" placeholder="(00) 00000-0000" required>
+            </label>
+          </div>
+          <p class="privacy-note"><span aria-hidden="true">♧</span> Usaremos seus dados apenas para identificar e gerenciar este agendamento.</p>
+          <div class="step-actions"><button type="button" class="button button-quiet" data-back="3">← Alterar horário</button><button type="submit" class="button button-primary" id="submit-button">Confirmar agendamento <span aria-hidden="true">→</span></button></div>
+        </section>
+
+        <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+      </form>
+      <div class="card-footer"><span class="footer-spark" aria-hidden="true">✳</span><span>Um bom corte começa com uma boa experiência.</span></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>ATENDIMENTO COM HORA MARCADA</span><span class="footer-separator">•</span><span>FEITO PARA FACILITAR SEU DIA</span></footer>
+  <script type="module" src="/js/booking.js"></script>
+</body>
+</html>
